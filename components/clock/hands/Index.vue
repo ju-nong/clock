@@ -13,9 +13,19 @@
 
 <style lang="scss">
 .clock-hands {
+    > div {
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+
+        &:not(.clock-hands-point) {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            border-radius: 100px;
+        }
+    }
+
     &-point {
         border: 2px solid #fff;
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
     }
 }
 </style>
