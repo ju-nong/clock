@@ -1,5 +1,5 @@
 <template>
-    <Clock />
+    <div class="clock-hands-second"></div>
 </template>
 
 <script setup></script>
