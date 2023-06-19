@@ -2,7 +2,14 @@
     <div class="clock-hands-second z-[9] bg-red-700 w-[2px] h-[110px]"></div>
 </template>
 
-<script setup></script>
+<script setup>
+const props = defineProps({
+    second: {
+        default: "00",
+        type: String,
+    },
+});
+</script>
 
 <style lang="scss">
 .clock-hands-second {
