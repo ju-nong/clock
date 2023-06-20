@@ -1,6 +1,6 @@
 <template>
     <div
-        class="clock-hands-second z-[9] bg-red-700 w-[2px] h-[110px]"
+        class="clock-analog-hands-second z-[9] bg-red-700 w-[2px] h-[110px]"
         :style="`--angle: ${angle}deg;`"
     ></div>
 </template>
@@ -21,7 +21,7 @@ const angle = computed(() => {
 </script>
 
 <style lang="scss">
-.clock-hands-second {
+.clock-analog-hands-second {
     transform-origin: 50% 80%;
     transform: translate(-50%, -80%) rotate(var(--angle));
 }

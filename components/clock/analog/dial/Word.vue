@@ -1,6 +1,6 @@
 <template>
     <li
-        class="clock-dial-word"
+        class="clock-analog-dial-word"
         :style="calculateClockNumberPosition(props.word)"
     >
         {{ isValid ? props.word : "╹" }}
@@ -36,7 +36,7 @@ const calculateClockNumberPosition = (number) => {
 </script>
 
 <style lang="scss">
-.clock-dial-word {
+.clock-analog-dial-word {
     position: absolute;
     transform: translate(-50%, -50%) rotate(var(--deg));
     font-size: 22px;

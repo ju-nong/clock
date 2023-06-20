@@ -1,31 +1,27 @@
 <template>
     <div
-        class="clock-hands-hour z-[7] w-[6px] h-[70px]"
+        class="clock-analog-hands-minute z-[8] w-[4px] h-[85px]"
         :style="`--angle: ${angle}deg;`"
     ></div>
 </template>
 
 <script setup>
 const props = defineProps({
-    hour: {
+    minute: {
         default: "00",
         type: String,
     },
 });
 
 const angle = computed(() => {
-    const hour = Number(props.hour);
+    const minute = Number(props.minute);
 
-    if (hour === 1 || hour === 12) {
-        return 0;
-    }
-
-    return hour * 30;
+    return minute * 6;
 });
 </script>
 
 <style lang="scss">
-.clock-hands-hour {
+.clock-analog-hands-minute {
     background-color: #ff7f26;
     transform-origin: bottom center;
     transform: translate(-50%, -100%) rotate(var(--angle));
