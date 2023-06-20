@@ -1,16 +1,16 @@
 <template>
     <div class="clock-hands absolute">
         <ClockHandsPin />
-        <ClockHandsHour :hour="formatted.slice(0, 1)" />
-        <ClockHandsMinute :minute="formatted.slice(1, 2)" />
-        <ClockHandsSecond :second="formatted.slice(2, 3)" />
+        <ClockHandsHour :hour="formatted.slice(0, 2)" />
+        <ClockHandsMinute :minute="formatted.slice(2, 4)" />
+        <ClockHandsSecond :second="formatted.slice(4, 6)" />
     </div>
 </template>
 
 <script setup>
 import { useNow, useDateFormat } from "@vueuse/core";
 
-const formatted = useDateFormat(useNow(), "hms");
+const formatted = useDateFormat(useNow(), "hhmmss");
 </script>
 
 <style lang="scss">

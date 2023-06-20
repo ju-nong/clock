@@ -1,5 +1,8 @@
 <template>
-    <div class="clock-hands-second z-[9] bg-red-700 w-[2px] h-[110px]"></div>
+    <div
+        class="clock-hands-second z-[9] bg-red-700 w-[2px] h-[110px]"
+        :style="`--angle: ${angle}deg;`"
+    ></div>
 </template>
 
 <script setup>
@@ -9,11 +12,17 @@ const props = defineProps({
         type: String,
     },
 });
+
+const angle = computed(() => {
+    const second = Number(props.second);
+
+    return second * 6;
+});
 </script>
 
 <style lang="scss">
 .clock-hands-second {
     transform-origin: 50% 80%;
-    transform: translate(-50%, -80%) rotate(30deg);
+    transform: translate(-50%, -80%) rotate(var(--angle));
 }
 </style>
