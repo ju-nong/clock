@@ -10,7 +10,7 @@
 <script setup>
 import { useNow, useDateFormat } from "@vueuse/core";
 
-const formatted = useDateFormat(useNow(), "hhmmss");
+const formatted = useDateFormat(useNow(), "hhmmss", { locales: "ko" });
 </script>
 
 <style lang="scss">
