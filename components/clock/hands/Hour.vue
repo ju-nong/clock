@@ -13,8 +13,6 @@ const props = defineProps({
     },
 });
 
-console.log(props.hour);
-
 const angle = computed(() => {
     const hour = Number(props.hour);
 
