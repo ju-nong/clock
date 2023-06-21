@@ -1,5 +1,5 @@
 <template>
-    <div class="clock-digital-number w-[50px] h-[100px] relative">
+    <div class="clock-digital-number">
         <div
             v-for="(segment, index) in segments"
             :key="index"
@@ -34,6 +34,9 @@ const segments = computed(() => segmentPatterns[Number(props.number)]);
 
 <style lang="scss">
 .clock-digital-number {
+    width: 50px;
+    height: 100px;
+    position: relative;
     > div {
         position: absolute;
         width: 80%;
