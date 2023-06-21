@@ -23,6 +23,11 @@
         <Meta name="description" content="시계를 만나보세요." />
     </Head>
     <Clock />
+    <h3
+        class="w-full text-center fixed left-[50%] bottom-[1vh] text-sm translate-x-[-50%]"
+    >
+        © 2023 이준용. All rights reserved.
+    </h3>
 </template>
 
 <script setup></script>
