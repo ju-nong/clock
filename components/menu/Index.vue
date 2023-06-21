@@ -44,9 +44,9 @@ const clocks = reactive(["Analog", "Digital"]);
             &.active {
                 box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
 
-                &:hover {
+                /* &:hover {
                     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-                }
+                } */
 
                 &:active {
                     box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
