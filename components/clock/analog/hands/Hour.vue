@@ -1,7 +1,7 @@
 <template>
     <div
         class="clock-analog-hands-hour z-[7] w-[6px] h-[70px]"
-        :style="`--angle: ${props.hour * 30}deg;`"
+        :style="`--h-angle: ${props.hour * 30}deg;`"
     ></div>
 </template>
 
@@ -18,6 +18,6 @@ const props = defineProps({
 .clock-analog-hands-hour {
     background-color: #ff7f26;
     transform-origin: bottom center;
-    transform: translate(-50%, -100%) rotate(var(--angle));
+    transform: translate(-50%, -100%) rotate(var(--h-angle));
 }
 </style>

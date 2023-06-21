@@ -1,7 +1,7 @@
 <template>
     <div
         class="clock-analog-hands-second z-[9] bg-red-700 w-[2px] h-[110px]"
-        :style="`--angle: ${props.second * 6}deg;`"
+        :style="`--s-angle: ${props.second * 6}deg;`"
     ></div>
 </template>
 
@@ -17,6 +17,6 @@ const props = defineProps({
 <style lang="scss">
 .clock-analog-hands-second {
     transform-origin: 50% 80%;
-    transform: translate(-50%, -80%) rotate(var(--angle));
+    transform: translate(-50%, -80%) rotate(var(--s-angle));
 }
 </style>
