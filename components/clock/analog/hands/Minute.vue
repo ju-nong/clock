@@ -1,7 +1,7 @@
 <template>
     <div
         class="clock-analog-hands-minute z-[8] w-[4px] h-[85px]"
-        :style="`--angle: ${angle}deg;`"
+        :style="`--angle: ${props.minute * 6}deg;`"
     ></div>
 </template>
 
@@ -12,8 +12,6 @@ const props = defineProps({
         type: String,
     },
 });
-
-const angle = computed(() => Number(props.minute) * 6);
 </script>
 
 <style lang="scss">

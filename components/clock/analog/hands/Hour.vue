@@ -12,8 +12,6 @@ const props = defineProps({
         type: String,
     },
 });
-
-const angle = computed(() => Number(props.hour) * 30);
 </script>
 
 <style lang="scss">
