@@ -1,12 +1,24 @@
 <template>
-    <div class="clock-digital w-[250px] h-[250px] flex flex-col justify-center">
+    <div
+        class="clock-digital w-[300px] h-[250px] flex flex-col justify-center relative z-[11]"
+    >
         <div
-            class="clock-digital-container w-full h-[150px] rounded-3xl bg-white"
-        ></div>
+            class="clock-digital-container w-full h-[150px] rounded-3xl bg-white flex items-center justify-center gap-x-[8px]"
+        >
+            <DigitalNumber :number="formatted.slice(0, 1)" />
+            <DigitalNumber :number="formatted.slice(1, 2)" />
+            <DigitalColons />
+            <DigitalNumber :number="formatted.slice(2, 3)" />
+            <DigitalNumber :number="formatted.slice(3, 4)" />
+        </div>
     </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { useNow, useDateFormat } from "@vueuse/core";
+
+const formatted = useDateFormat(useNow(), "HHmm");
+</script>
 
 <style lang="scss">
 .clock-digital {

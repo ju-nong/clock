@@ -1,6 +1,6 @@
 <template>
     <div
-        class="clock-analog bg-white rounded-full w-[250px] h-[250px] flex items-center justify-center relative"
+        class="clock-analog bg-white rounded-full w-[250px] h-[250px] flex items-center justify-center relative z-[11]"
     >
         <AnalogDial />
         <AnalogHands />
