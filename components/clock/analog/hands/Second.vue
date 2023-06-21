@@ -13,11 +13,7 @@ const props = defineProps({
     },
 });
 
-const angle = computed(() => {
-    const second = Number(props.second);
-
-    return second * 6;
-});
+const angle = computed(() => Number(props.second) * 6);
 </script>
 
 <style lang="scss">

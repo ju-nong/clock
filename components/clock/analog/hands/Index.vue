@@ -11,6 +11,8 @@
 import { useNow, useDateFormat } from "@vueuse/core";
 
 const formatted = useDateFormat(useNow(), "hhmmss");
+
+console.log("hands", formatted.value);
 </script>
 
 <style lang="scss">
