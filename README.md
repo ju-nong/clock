@@ -1,2 +1,2 @@
 # 시계
-시계를 만나보세요, 아날로그와 디지털 시계가 있어요 ^__^ b
+[Velog](https://velog.io/@ju-nong/%EC%99%80-%EC%8B%9C%EA%B3%84)
